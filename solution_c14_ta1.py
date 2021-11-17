@@ -45,7 +45,6 @@ class Pipe:
             self.bpipe.y=self.height+150
             
 # Defining a function 'eval_fitness()' and passing 'generation' and 'config' as parameters
-# Moving the entire game code inside the function
 def eval_fitness(generation,config):
     # Creating a variable 'birdcount' and assigning 1 to it
     birdcount=1
@@ -57,6 +56,7 @@ def eval_fitness(generation,config):
     font1=pygame.font.Font('freesansbold.ttf', 20) 
     # Creating a "for" loop to execute the game code for every 'genome' in the 'generation'
     for genome in generation:
+        # Moving the entire game code inside the for loop in the function
         bird1=Bird()
         pipe1=Pipe(250)
         bird1.bird.y=200
